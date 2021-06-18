@@ -14,7 +14,7 @@
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title mb-4">Billing Address</h4>
-						<form action="" method="POST">
+						<form action="{% url 'place_order' %}" method="POST">
 							{% csrf_token %}
 							<div class="form-row">
 								<div class="col form-group">
@@ -23,7 +23,7 @@
 								</div>
 								<div class="col form-group">
 									<label for="">Second Name</label>
-									<input type="text" name="second_name" class="form-control" required>
+									<input type="text" name="last_name" class="form-control" required>
 								</div>
 							</div>
 							<div class="form-row">
@@ -33,7 +33,7 @@
 								</div>
 								<div class="col form-group">
 									<label for="">Phone Number</label>
-									<input type="text" name="phome" class="form-control" required>
+									<input type="text" name="phone" class="form-control" required>
 								</div>
 							</div>
 							<div class="form-row">
@@ -106,6 +106,7 @@
 													{{ item.variation_value | capfirst }}<br>
 													{% endfor %}
 													{% endif %}
+												</p>
 											</figcaption>
 										</figure>
 									</td>

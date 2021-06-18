@@ -57,7 +57,7 @@
 										<div class="input-group input-spinner">
 											<div class="input-group-prepend">
 												<a href="{% url 'remove_cart' cart_item.product.id cart_item.id %}"
-													class="btn btn-light" type="button" id="button-plus">
+													class="btn btn-light button-plus" type="button">
 													<i class="fa fa-minus"></i>
 												</a>
 											</div>
@@ -69,7 +69,7 @@
 													<input type="hidden" name="{{ item.variation_category | capfirst }}"
 														value="{{ item.variation_value | capfirst }}">
 													{% endfor %}
-													<button class="btn btn-light" type="submit" id="button-minus">
+													<button class="btn btn-light button-minus" type="submit">
 														<i class="fa fa-plus"></i>
 													</button>
 												</form>
